@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Data & Process Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F7F3;
+    --paper-alt:#EFF1EA;
+    --ink:#1C201B;
+    --ink-soft:#565D53;
+    --line:#D6DAD0;
+    --line-strong:#B9C0B2;
+    --amber:#B8801E;
+    --amber-soft:#EFDFC2;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--ink);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 32px;}
+
+  /* ---------- Header / Hero ---------- */
+  header.hero{
+    border-bottom:2px solid var(--ink);
+    padding-top:56px;
+    padding-bottom:40px;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 27px,
+        var(--line) 27px,
+        var(--line) 28px
+      );
+  }
+  .hero-inner{
+    background:var(--paper);
+  }
+  .hero-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:24px;
+  }
+  h1.name{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    margin:0 0 6px 0;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .contact-block{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;
+    text-align:right;
+    color:var(--ink-soft);
+    line-height:1.9;
+  }
+  .contact-block a{text-decoration:none;border-bottom:1px solid var(--line-strong);}
+  .contact-block a:hover{border-bottom-color:var(--ink);}
+  .tagline{
+    max-width:620px;
+    font-size:1.15rem;
+    margin-top:28px;
+    color:var(--ink);
+  }
+  .tagline strong{
+    background:var(--amber-soft);
+    padding:0 4px;
+    font-weight:500;
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section{padding:48px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:28px;
+  }
+  h2.section-title{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.65rem;
+    margin:0;
+  }
+  .section-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+    color:var(--ink-soft);
+  }
+  .org{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    margin-bottom:24px;
+  }
+  .org strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- Metric rows (the ledger) ---------- */
+  .ledger{border-top:1px solid var(--line-strong);}
+  .row{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:24px;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+    align-items:baseline;
+  }
+  .row:nth-child(odd){background:var(--paper-alt);}
+  .row:nth-child(odd) .metric,
+  .row:nth-child(odd) .desc{padding-left:12px;padding-right:12px;}
+  .metric{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--amber);
+    white-space:nowrap;
+  }
+  .metric small{
+    display:block;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:400;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    margin-top:2px;
+    white-space:normal;
+  }
+  .desc{font-size:0.98rem;}
+  .desc b{font-weight:600;}
+
+  @media (max-width:620px){
+    .row{grid-template-columns:1fr;gap:6px;}
+    .contact-block{text-align:left;}
+    .hero-top{flex-direction:column;}
+  }
+
+  /* ---------- Skills ---------- */
+  .skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .skill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    border:1px solid var(--line-strong);
+    padding:7px 12px;
+    background:var(--paper-alt);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:40px 0 64px 0;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  footer a{text-decoration:none;border-bottom:1px solid var(--line-strong);}
+  footer a:hover{border-bottom-color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <div>
+        <h1 class="name">Your Name</h1>
+        <p class="role">Data & Process Analyst</p>
+      </div>
+      <div class="contact-block">
+        <div><a href="mailto:you@email.com">you@email.com</a></div>
+        <div><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></div>
+        <div><a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></div>
+      </div>
+    </div>
+    <p class="tagline">I turn messy, error-prone spreadsheets into <strong>fast, reliable systems</strong> — automating data pipelines across records ranging from a few thousand rows to two hundred thousand.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="experience">
+    <div class="section-head">
+      <h2 class="section-title">Experience</h2>
+      <span class="section-meta">June 2026 – Present</span>
+    </div>
+    <p class="org"><strong>ENRA Group Berhad</strong> — Internship</p>
+
+    <div class="ledger">
+      <div class="row">
+        <div class="metric">40%<small>faster data entry</small></div>
+        <div class="desc">Redesigned procurement spreadsheet formulas to boost data entry speed across <b>10,000+ records</b>, cutting manual processing time by <b>3 days per project</b>.</div>
+      </div>
+      <div class="row">
+        <div class="metric">25,000<small>rows automated</small></div>
+        <div class="desc">Engineered an automated Google Sheets solution for a <b>25,000-row, 30-column database</b>, eliminating manual cross-referencing and enabling instant, error-free edits.</div>
+      </div>
+      <div class="row">
+        <div class="metric">90%<small>faster extraction</small></div>
+        <div class="desc">Automated web data extraction with Google Colab, transforming <b>75 pages of HTML</b> into structured CSV files and cutting processing time from 3 days to under 3 hours across <b>1,200+ product records</b>.</div>
+      </div>
+      <div class="row">
+        <div class="metric">200,000<small>rows cleaned</small></div>
+        <div class="desc">Cleaned and standardized a <b>200,000-row, 34-column dataset</b> containing 20,000+ errors using Excel Power Query, cutting review time by <b>70%</b> and achieving <b>100% data completeness</b>.</div>
+      </div>
+      <div class="row">
+        <div class="metric">—<small>validation built-in</small></div>
+        <div class="desc">Strengthened reporting accuracy by designing automated validation checks and structured data transformation processes used across procurement reporting.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="section-head">
+      <h2 class="section-title">Academic Project</h2>
+      <span class="section-meta">Final Year Project</span>
+    </div>
+    <p class="org">Analysing Customer Waiting Time Using Queuing Models</p>
+
+    <div class="ledger">
+      <div class="row">
+        <div class="metric">2 wks<small>field study</small></div>
+        <div class="desc">Led a two-week observational study at <b>ZUS Coffee</b> and <b>7-Eleven</b>, capturing customer arrival, queue length and service metrics.</div>
+      </div>
+      <div class="row">
+        <div class="metric">M/M/1<small>&amp; M/M/C models</small></div>
+        <div class="desc">Developed Single Server (M/M/1) and Multi Server (M/M/C) models in <b>MATLAB</b> to simulate customer waiting time, identifying service bottlenecks through statistical analysis.</div>
+      </div>
+      <div class="row">
+        <div class="metric">30–40%<small>shorter wait times</small></div>
+        <div class="desc">Showed that multi-server configurations reduced predicted wait times by 30–40% compared to single-server setups, and presented findings to guide service allocation and improve customer throughput.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skills">
+      <span class="skill">Excel — Power Query</span>
+      <span class="skill">Advanced Formulas</span>
+      <span class="skill">Google Sheets / Apps Script</span>
+      <span class="skill">Google Colab / Python</span>
+      <span class="skill">MATLAB</span>
+      <span class="skill">Data Cleaning &amp; Validation</span>
+      <span class="skill">Queuing Theory &amp; Simulation</span>
+      <span class="skill">Statistical Analysis</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>Open to data analyst and process automation roles. Reach out at <a href="mailto:you@email.com">you@email.com</a> or find more on <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>.</p>
+</footer>
+
+</body>
+</html>
